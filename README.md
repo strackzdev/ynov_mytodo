@@ -50,6 +50,22 @@ Les modifications dans le code sont restées **minimales**. L’objectif princip
 ![alt text](./images/tp3/scalingo-dash.png)
 
 ---
+## 7. Intégration Bonus : MongoDB via Azure CosmosDB
+
+Dans le cadre d’un test complémentaire, j’ai mis en place un **cluster MongoDB** à l’aide du service **Azure CosmosDB**. Pour permettre l’accès depuis Scalingo, j’ai configuré les **autorisations réseau** afin que le cluster soit exposé à l’extérieur.
+
+![Création du cluster MongoDB sur CosmosDB](./images/tp3/create-db.png)
+
+J’ai ensuite mis à jour la variable d’environnement `MONGO_URL` sur Scalingo avec la **chaîne de connexion fournie par Azure**.
+
+![Chaîne de connexion MongoDB Azure](./images/tp3/database-string.png)  
+![Cluster MongoDB configuré sur Azure](./images/tp3/created-cluster.png)
+
+Après avoir redémarré l'application avec cette nouvelle configuration, la **connexion à CosmosDB a été établie avec succès**, et j’ai pu **recréer des données** dans la base.
+
+![Application connectée à Azure MongoDB](./images/tp3/app-with-azure.png)
+
+---
 ## Conclusion
 
 Le projet a été déployé avec succès sur Scalingo en utilisant une base MongoDB externe configurée via add-on. L'intégration s'est faite simplement grâce à la configuration des variables d'environnement et à quelques ajustements dans le code source.
