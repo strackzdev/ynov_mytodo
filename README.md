@@ -1,5 +1,7 @@
 # Documentation du TP3 de Cloud - Déploiement d'une application Node.js avec MongoDB sur Scalingo
 
+Lien de l'application: https://mytodo.osc-fr1.scalingo.io/
+
 ## 1. Configuration initiale
 
 Avant de commencer la préparation du service, j'ai configuré un **add-on MongoDB** sur Scalingo.
@@ -51,6 +53,3 @@ Les modifications dans le code sont restées **minimales**. L’objectif princip
 ## Conclusion
 
 Le projet a été déployé avec succès sur Scalingo en utilisant une base MongoDB externe configurée via add-on. L'intégration s'est faite simplement grâce à la configuration des variables d'environnement et à quelques ajustements dans le code source.
-
-
-
